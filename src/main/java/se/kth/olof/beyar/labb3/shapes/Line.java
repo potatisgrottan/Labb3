@@ -37,7 +37,15 @@ public class Line extends Shape {
 
     @Override
     protected void constrain(double boxX, double boxY, double boxWidth, double boxHeight) {
-        super.constrain(boxX,boxY,boxWidth,boxHeight);
+        //super.constrain(boxX, boxY, boxWidth, boxHeight);
+
+        if (getX() < boxX || getX() > boxWidth || x2 < boxX || x2 > boxWidth) {
+            setVelocity(-getDx(), getDy());
+        }
+
+        if (getY() < boxY || getY() > boxHeight || y2 < boxY || y2 > boxHeight) {
+            setVelocity(getDx(), -getDy());
+        }
 
         /*
         if (x2 < boxX) {
