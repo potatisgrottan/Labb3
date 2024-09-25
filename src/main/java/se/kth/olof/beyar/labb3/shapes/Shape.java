@@ -184,9 +184,6 @@ abstract public class Shape {
 
     @Override
     public String toString() {
-        String info
-                = this.getClass().getName() + ": x=" + x + ", y=" + y
-                + ", color=" + color;
-        return info;
+        return this.getClass().getName() + ": x=" + x + ", y=" + y + ", color=" + color;
     }
 }

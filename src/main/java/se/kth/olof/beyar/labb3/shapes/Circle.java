@@ -2,29 +2,27 @@ package se.kth.olof.beyar.labb3.shapes;
 
 import javafx.scene.canvas.GraphicsContext;
 
-public class Circle extends FillableShape{
+public class Circle extends FillableShape {
     private double diameter;
 
-    public Circle(){
-
-    }
+    public Circle() {}
 
     public double getDiameter(){
         return diameter;
     }
 
     public void setDiameter(double newDiameter){
-        diameter=newDiameter;
+        diameter = newDiameter;
     }
 
     @Override
-    public void paint(GraphicsContext gc) {
-    }
+    public void paint(GraphicsContext gc) {}
 
     @Override
     protected void constrain(double boxX, double boxY, double boxWidth, double boxHeight) {
         super.constrain(boxX, boxY, boxWidth, boxHeight);
 
+        /*
         if (x2 < boxX) {
             dx = Math.abs(dx);
         } else if (x2 > boxWidth) {
@@ -35,6 +33,7 @@ public class Circle extends FillableShape{
         } else if (y2 > boxHeight) {
             dy = -Math.abs(dy);
         }
+        */
     }
 
     @Override

@@ -3,7 +3,7 @@ package se.kth.olof.beyar.labb3.shapes;
 import javafx.scene.canvas.GraphicsContext;
 
 public class Rectangle extends FillableShape{
-    private double width,height;
+    private double width, height;
 
     public Rectangle() {}
 
@@ -28,8 +28,9 @@ public class Rectangle extends FillableShape{
 
     @Override
     protected void constrain(double boxX, double boxY, double boxWidth, double boxHeight) {
-        super.constrain(boxX,boxY,boxWidth,boxHeight);
+        super.constrain(boxX, boxY, boxWidth, boxHeight);
 
+        /*
         if (x2 < boxX) {
             dx = Math.abs(dx);
         } else if (x2 > boxWidth) {
@@ -40,6 +41,7 @@ public class Rectangle extends FillableShape{
         } else if (y2 > boxHeight) {
             dy = -Math.abs(dy);
         }
+        */
     }
 
     @Override
