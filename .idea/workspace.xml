@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Shape and world">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Circle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/FillableShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/FillableShape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Line.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
