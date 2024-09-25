@@ -144,7 +144,6 @@ abstract public class Shape {
      */
     abstract public void paint(GraphicsContext gc);
 
-
     /**
      * Move the shape a distance depending on the elapsed time in nanoseconds.
      * Velocity is measured in pixels/second.

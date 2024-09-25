@@ -3,7 +3,7 @@ package se.kth.olof.beyar.labb3.shapes;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class Line extends Shape{
+public class Line extends Shape {
 
     private double x2,y2;
 
@@ -36,8 +36,7 @@ public class Line extends Shape{
     }
 
     @Override
-    protected void constrain(double boxX, double boxY,
-                             double boxWidth, double boxHeight){
+    protected void constrain(double boxX, double boxY, double boxWidth, double boxHeight) {
         super.constrain(boxX,boxY,boxWidth,boxHeight);
 
         if (x2 < boxX) {

@@ -5,9 +5,7 @@ import javafx.scene.canvas.GraphicsContext;
 public class Rectangle extends FillableShape{
     private double width,height;
 
-    public Rectangle(){
-
-    }
+    public Rectangle() {}
 
     public double getWidth() {
         return width;
@@ -26,13 +24,10 @@ public class Rectangle extends FillableShape{
     }
 
     @Override
-    public void paint(GraphicsContext gc) {
-
-    }
+    public void paint(GraphicsContext gc) {}
 
     @Override
-    protected void constrain(double boxX, double boxY,
-                             double boxWidth, double boxHeight){
+    protected void constrain(double boxX, double boxY, double boxWidth, double boxHeight) {
         super.constrain(boxX,boxY,boxWidth,boxHeight);
 
         if (x2 < boxX) {

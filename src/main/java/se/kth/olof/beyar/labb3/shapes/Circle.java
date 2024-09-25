@@ -12,22 +12,18 @@ public class Circle extends FillableShape{
     public double getDiameter(){
         return diameter;
     }
+
     public void setDiameter(double newDiameter){
         diameter=newDiameter;
     }
 
-
-
-
     @Override
     public void paint(GraphicsContext gc) {
-
     }
 
     @Override
-    protected void constrain(double boxX, double boxY,
-                             double boxWidth, double boxHeight){
-        super.constrain(boxX,boxY,boxWidth,boxHeight);
+    protected void constrain(double boxX, double boxY, double boxWidth, double boxHeight) {
+        super.constrain(boxX, boxY, boxWidth, boxHeight);
 
         if (x2 < boxX) {
             dx = Math.abs(dx);

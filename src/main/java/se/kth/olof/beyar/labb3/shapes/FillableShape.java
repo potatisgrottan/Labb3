@@ -13,6 +13,4 @@ public  abstract class FillableShape extends Shape {
         public void setFilled(boolean filled){
 
         }
-
-
 }
