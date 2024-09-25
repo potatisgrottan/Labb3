@@ -36,6 +36,29 @@ public class Line extends Shape{
     }
 
     @Override
+    protected void constrain(double boxX, double boxY,
+                             double boxWidth, double boxHeight){
+        super.constrain(boxX,boxY,boxWidth,boxHeight);
+
+        if (x2 < boxX) {
+            dx = Math.abs(dx);
+        } else if (x2 > boxWidth) {
+            dx = -Math.abs(dx);
+        }
+        if (y2 < boxY) {
+            dy = Math.abs(dy);
+        } else if (y2 > boxHeight) {
+            dy = -Math.abs(dy);
+        }
+    }
+
+    @Override
+    public void move(long elapsedTimeNs){
+        super.move(elapsedTimeNs);
+        x2 += getDx() * elapsedTimeNs / BILLION;
+        y2 += getDy() * elapsedTimeNs / BILLION;
+    }
+    @Override
     public void paint(GraphicsContext gc){
        gc.setStroke(getColor());
        gc.strokeLine(getX(),getY(),x2,y2);
