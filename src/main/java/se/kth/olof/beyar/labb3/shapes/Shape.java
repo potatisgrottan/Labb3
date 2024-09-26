@@ -1,4 +1,4 @@
-package se.kth.olof.beyar.labb3.shapes; // TODO: Change to your package name
+package se.kth.olof.beyar.labb3.shapes;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
@@ -16,7 +16,6 @@ import javafx.scene.paint.Color;
  * @author Anders Lindström, anderslm@kth.se 2021-09-15
  */
 abstract public class Shape {
-
     public static final double BILLION = 1_000_000_000.0;
     private double x, y; // position of the balls center
     private double dx, dy; // velocity measured in pixels/second
@@ -166,15 +165,14 @@ abstract public class Shape {
      * @param boxWidth
      * @param boxHeight
      */
-    protected void constrain(
-            double boxX, double boxY,
-            double boxWidth, double boxHeight) {
+    protected void constrain(double boxX, double boxY, double boxWidth, double boxHeight) {
         // If outside the box - calculate new dx and dy
         if (x < boxX) {
             dx = Math.abs(dx);
         } else if (x > boxWidth) {
             dx = -Math.abs(dx);
         }
+
         if (y < boxY) {
             dy = Math.abs(dy);
         } else if (y > boxHeight) {
