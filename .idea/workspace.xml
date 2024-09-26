@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Shape and world">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/FillableShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/FillableShape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Line.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +114,21 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1727258630389</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Line är klar. bortsett från constraint då jag inte hittat en lösning än på hur vi ska byta ut dx och dy i constraint metoden, se slutet av filmen för del a om line så har du kommit lika långt som mig">
+      <option name="closed" value="true" />
+      <created>1727264964512</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1727264964512</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Skelett till Circle, rectangle och fillableShape">
+      <option name="closed" value="true" />
+      <created>1727265967021</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1727265967021</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +145,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Line and fixed some references" />
     <MESSAGE value="Shape and world" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shape and world" />
+    <MESSAGE value="Line är klar. bortsett från constraint då jag inte hittat en lösning än på hur vi ska byta ut dx och dy i constraint metoden, se slutet av filmen för del a om line så har du kommit lika långt som mig" />
+    <MESSAGE value="Skelett till Circle, rectangle och fillableShape" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skelett till Circle, rectangle och fillableShape" />
   </component>
 </project>

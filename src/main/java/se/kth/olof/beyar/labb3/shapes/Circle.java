@@ -42,18 +42,7 @@ public class Circle extends FillableShape {
         if (getY() - diameter/2 < boxY || getY() + diameter/2 > boxY + boxHeight) {
             setVelocity(getDx(), -getDy());
         }
-        /*
-        if (x2 < boxX) {
-            dx = Math.abs(dx);
-        } else if (x2 > boxWidth) {
-            dx = -Math.abs(dx);
-        }
-        if (y2 < boxY) {
-            dy = Math.abs(dy);
-        } else if (y2 > boxHeight) {
-            dy = -Math.abs(dy);
-        }
-        */
+
     }
 
     @Override
