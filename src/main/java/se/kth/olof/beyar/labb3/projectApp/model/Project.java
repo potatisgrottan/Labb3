@@ -1,15 +1,18 @@
 package se.kth.olof.beyar.labb3.projectApp.model;
 
-import java.time.LocalDate;
+import se.kth.olof.beyar.labb3.projectApp.model.matcher.ITaskMatcher;
 
-public class Project implements Comparable<T> {
+import java.time.LocalDate;
+import java.util.List;
+
+public class Project implements Comparable {
     private String title;
     private String description;
     private int id;
     private LocalDate created;
 
-
-    protected Project(String title, String description, int id){
+    //Ska va package private men kommer ej ihåg hur man gör
+    private Project(String title, String description, int id){
         this.title=title;
         this.description=description;
         this.id=id;
@@ -54,5 +57,11 @@ public class Project implements Comparable<T> {
                 ", id=" + id +
                 ", created=" + created +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        //TODO implement
+        return 0;
     }
 }

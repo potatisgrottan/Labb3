@@ -1,7 +1,7 @@
 package se.kth.olof.beyar.labb3.projectApp.ui;
 
-import model.Project;
-import model.ProjectsManager;
+import se.kth.olof.beyar.labb3.projectApp.model.Project;
+import se.kth.olof.beyar.labb3.projectApp.model.ProjectsManager;
 
 import java.util.List;
 import java.util.Scanner;

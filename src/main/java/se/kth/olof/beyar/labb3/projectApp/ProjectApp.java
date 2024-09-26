@@ -1,9 +1,9 @@
 package se.kth.olof.beyar.labb3.projectApp;
 
-import io.ProjectsFileIO;
-import model.Project;
-import model.ProjectsManager;
-import ui.MainUI;
+import se.kth.olof.beyar.labb3.projectApp.io.ProjectsFileIO;
+import se.kth.olof.beyar.labb3.projectApp.model.Project;
+import se.kth.olof.beyar.labb3.projectApp.model.ProjectsManager;
+import se.kth.olof.beyar.labb3.projectApp.ui.MainUI;
 
 import java.io.File;
 import java.io.FileNotFoundException;
