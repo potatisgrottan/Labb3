@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Shape and world">
+    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Tog bort todo i Shape">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,35 +128,49 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1727294510428</updated>
     </task>
-    <task id="LOCAL−00005" summary="Fixade logik i constrain så att objektet inte åkte utanför gränserna i Line">
+    <task id="LOCAL−00005" summary="Lade till fler Shapes med olika variationer, ändrade i App och World för att göra koden mer konsistent">
       <option name="closed" value="true" />
-      <created>1727294538783</created>
+      <created>1727362999002</created>
       <option name="number" value="LOCAL−00005" />
       <option name="presentableId" value="LOCAL−00005" />
-      <updated>1727294538783</updated>
+      <updated>1727362999002</updated>
     </task>
-    <task id="LOCAL−00006" summary="Fixade konstruktor så att den får in x, y, höjd och bredd tillsammans med färg och om den är ifylld&#10;&#10;Även i denna funktion fixade jag i Paint metoden så om den är ifylld appliceras en viss typ av logik">
+    <task id="LOCAL−00006" summary="Använder this istället och lade till några kommentarer">
       <option name="closed" value="true" />
-      <created>1727294603499</created>
+      <created>1727363024819</created>
       <option name="number" value="LOCAL−00006" />
       <option name="presentableId" value="LOCAL−00006" />
-      <updated>1727294603499</updated>
+      <updated>1727363024819</updated>
     </task>
-    <task id="LOCAL−00007" summary="Lade till 3 nya objekt, cirkel, linje och rektangel">
+    <task id="LOCAL−00007" summary="Använder this istället och lade till några kommentarer i Line">
       <option name="closed" value="true" />
-      <created>1727294635460</created>
+      <created>1727363030988</created>
       <option name="number" value="LOCAL−00007" />
       <option name="presentableId" value="LOCAL−00007" />
-      <updated>1727294635460</updated>
+      <updated>1727363030988</updated>
     </task>
-    <task id="LOCAL−00008" summary="Vet inte">
+    <task id="LOCAL−00008" summary="Använder this istället och lade till några kommentarer i Circle">
       <option name="closed" value="true" />
-      <created>1727294642536</created>
+      <created>1727363038251</created>
       <option name="number" value="LOCAL−00008" />
       <option name="presentableId" value="LOCAL−00008" />
-      <updated>1727294642536</updated>
+      <updated>1727363038251</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00009" summary="Använde this, tog bort onödig clausur och lade till några förklaringar till Line och Rectangle">
+      <option name="closed" value="true" />
+      <created>1727363079744</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1727363079744</updated>
+    </task>
+    <task id="LOCAL−00010" summary="Tog bort todo i Shape">
+      <option name="closed" value="true" />
+      <created>1727363102877</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1727363102877</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,6 +195,12 @@
     <MESSAGE value="Fixade konstruktor så att den får in x, y, höjd och bredd tillsammans med färg och om den är ifylld&#10;&#10;Även i denna funktion fixade jag i Paint metoden så om den är ifylld appliceras en viss typ av logik" />
     <MESSAGE value="Lade till 3 nya objekt, cirkel, linje och rektangel" />
     <MESSAGE value="Vet inte" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skelett till Circle, rectangle och fillableShape" />
+    <MESSAGE value="Lade till fler Shapes med olika variationer, ändrade i App och World för att göra koden mer konsistent" />
+    <MESSAGE value="Använder this istället och lade till några kommentarer" />
+    <MESSAGE value="Använder this istället och lade till några kommentarer i Line" />
+    <MESSAGE value="Använder this istället och lade till några kommentarer i Circle" />
+    <MESSAGE value="Använde this, tog bort onödig clausur och lade till några förklaringar till Line och Rectangle" />
+    <MESSAGE value="Tog bort todo i Shape" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tog bort todo i Shape" />
   </component>
 </project>

@@ -33,14 +33,16 @@ public class World {
         shapes[2] = new Circle(width/2, height/2, 30, Color.BLUE, true);
         shapes[2].setVelocity(-30, 50);
 
-        shapes[3] = new Circle(width/4, height/4, 30, Color.BLUE, false);
+        shapes[3] = new Circle(width/4, height/4, 30, Color.YELLOWGREEN, false);
         shapes[3].setVelocity(-30, 50);
 
         shapes[4] = new Rectangle(width/4, height/4, 40, 60, Color.GREEN, false);
         shapes[4].setVelocity(40, -20);
 
-        shapes[5] = new Rectangle(width/8, height/8, 40, 60, Color.BEIGE, true);
+        shapes[5] = new Rectangle(width/8, height/8, 40, 60, Color.DODGERBLUE, true);
         shapes[5].setVelocity(-40, -20);
+
+        invertFillableShapes();
     }
 
     /**
@@ -74,5 +76,14 @@ public class World {
      */
     public Shape[] getShapes() {
         return (Shape[]) shapes.clone();
+    }
+
+    public void invertFillableShapes() {
+        for (Shape shape : shapes) {
+            if (shape instanceof FillableShape) {
+                FillableShape fillableShape = (FillableShape) shape;
+                fillableShape.setFilled(!fillableShape.isFilled());
+            }
+        }
     }
 }
