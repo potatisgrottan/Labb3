@@ -16,18 +16,18 @@ public class Circle extends FillableShape {
         return diameter;
     }
 
-    public void setDiameter(double newDiameter){
-        diameter = newDiameter;
+    public void setDiameter(double diameter){
+        this.diameter = diameter;
     }
 
     @Override
     public void paint(GraphicsContext gc) {
         if (isFilled()) {
             gc.setFill(getColor());
-            gc.fillOval(getX() - diameter/2, getY() - diameter/2, diameter, diameter);
+            gc.fillOval(getX() - diameter / 2, getY() - diameter / 2, diameter, diameter);
         } else {
             gc.setStroke(getColor());
-            gc.strokeOval(getX() - diameter/2, getY() - diameter/2, diameter, diameter);
+            gc.strokeOval(getX() - diameter / 2, getY() - diameter / 2, diameter, diameter);
         }
     }
 
@@ -35,18 +35,22 @@ public class Circle extends FillableShape {
     protected void constrain(double boxX, double boxY, double boxWidth, double boxHeight) {
         super.constrain(boxX, boxY, boxWidth, boxHeight);
 
-        if (getX() - diameter/2 < boxX || getX() + diameter/2 > boxX + boxWidth) {
+        // Radius
+        final double r = diameter / 2;
+
+        // If the circles left side is outside the boxes left side OR vice-versa (right-side), change direction
+        if (getX() - r < boxX || getX() + r > boxX + boxWidth) {
             setVelocity(-getDx(), getDy());
         }
 
-        if (getY() - diameter/2 < boxY || getY() + diameter/2 > boxY + boxHeight) {
+        // If circles bottom is outside the boxes bottom OR vice-versa (top-side), change direction
+        if (getY() - r < boxY || getY() + r > boxY + boxHeight) {
             setVelocity(getDx(), -getDy());
         }
-
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "diameter: " + diameter;
     }
 }
