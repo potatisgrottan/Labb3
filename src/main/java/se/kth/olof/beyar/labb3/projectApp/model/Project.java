@@ -2,46 +2,48 @@ package se.kth.olof.beyar.labb3.projectApp.model;
 
 import se.kth.olof.beyar.labb3.projectApp.model.matcher.ITaskMatcher;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Project implements Comparable {
+public class Project implements Comparable<Project>, Serializable {
     private String title;
-    private String description;
     private int id;
+    private String description;
     private LocalDate created;
+    private int nextTaskId;
 
-    //Ska va package private men kommer ej ihåg hur man gör
-    private Project(String title, String description, int id){
-        this.title=title;
-        this.description=description;
-        this.id=id;
-        this.created=LocalDate.now();
+    //TODO Ska va package private men kommer ej ihåg hur man gör
+    // Vad menas? // Beyar
+    private Project(String title, String description, int id) {
+        this.title = title;
+        this.description = description;
+        this.id = id;
+        this.created = LocalDate.now();
     }
 
-    public Task getTaskById(int id){
+    public Task getTaskById(int id) {
         //TODO implement
     }
 
-    public List<Task> findTasks(ITaskMatcher matcher){
+    public List<Task> findTasks(ITaskMatcher matcher) {
         //TODO implement
     }
 
-    public Task addTask(String description, Prio prio){
-
+    public Task addTask(String description, TaskPrio prio) {
+        //TODO implement
     }
 
-    public boolean removeTask(Task task){
+    public boolean removeTask(Task task) {
         //TODO implement
         return false;
     }
 
-    public ProjectState getState(){
-
+    public ProjectState getState() {
+        //TODO implement
     }
 
     public LocalDate getLastUpdated(){
-        //TODO implement
         return created;
     }
 

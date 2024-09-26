@@ -4,6 +4,7 @@ import se.kth.olof.beyar.labb3.projectApp.model.matcher.AllTasksmatcher;
 import se.kth.olof.beyar.labb3.projectApp.model.matcher.NotDoneMatcher;
 import se.kth.olof.beyar.labb3.projectApp.model.matcher.PrioMatcher;
 import se.kth.olof.beyar.labb3.projectApp.model.*;
+import se.kth.olof.beyar.labb3.projectApp.model.matcher.TakenByMatcher;
 
 import java.util.List;
 import java.util.Scanner;
@@ -48,7 +49,7 @@ class CurrentProjectUI {
                     viewTasks(new NotDoneMatcher());
                     break;
                 case 'H':
-                    viewTasks(new PrioMatcher(Prio.High));
+                    viewTasks(new PrioMatcher(TaskPrio.HIGH));
                     break;
                 case 'A':
                     addTask();

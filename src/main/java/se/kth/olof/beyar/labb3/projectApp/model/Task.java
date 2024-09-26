@@ -1,38 +1,45 @@
 package se.kth.olof.beyar.labb3.projectApp.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Task implements Comparable {
+public class Task implements Comparable<Task>, Serializable {
     private String description;
-    private String takenBy;
     private int id;
+    private String takenBy;
     private TaskState state;
     private LocalDate lastUpdate;
-    private Prio prio;
+    private TaskPrio prio;
 
     //Ska va package private men kommer ej ihåg hur man gör
-    private Task(String descr, Prio prio, int id){
-        this.description=descr;
-        this.prio=prio;
-        this.id=id;
+    // Vad menas? // Beyar
+    private Task(String descr, TaskPrio prio, int id) {
+        this.description = descr;
+        this.prio = prio;
+        this.id = id;
     }
 
     public void setTakenBy(String takenBy) {
-        // this.takenBy = takenBy;
-        //TODO implement
-
+        this.takenBy = takenBy;
     }
 
     public void setState(TaskState state){
-        //TODO implement
+        this.state = state;
     }
 
-    public void setPrio(Prio prio){
-        //TODO implement
+    public void setPrio(TaskPrio prio){
+        this.prio = prio;
     }
 
     @Override
     public int compareTo(Object o) {
+        //TODO implement
+        return 0;
+    }
+
+    @Override
+    public int compareTo(Task o)
+    {
         //TODO implement
         return 0;
     }

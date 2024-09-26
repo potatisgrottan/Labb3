@@ -1,8 +1,10 @@
 package se.kth.olof.beyar.labb3.projectApp.model.matcher;
 
-public class NotDoneMatcher {
+import se.kth.olof.beyar.labb3.projectApp.model.Task;
 
-    public boolean match(Taks task){
+public class NotDoneMatcher implements ITaskMatcher {
+
+    public boolean match(Task task){
         //TODO implement
         return false;
     }

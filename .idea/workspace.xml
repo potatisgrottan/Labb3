@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Tog bort todo i Shape">
+    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Instruktionen säger att vi ska skilja ut de objekt som är av subtyper till FillableShape och anropa setFilled för att ändra från fylld till ofylld eller omvänt. Ordnade just det.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/shapes/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Prio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/TaskPrio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/TaskState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/TaskState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/TitleNotUniqueException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/TitleNotUniqueException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matcher/ITaskMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matcher/ITaskMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matcher/PrioMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matcher/PrioMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matcher/TakenByMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matcher/TakenByMatcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +179,14 @@
       <option name="presentableId" value="LOCAL−00010" />
       <updated>1727363102877</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL−00011" summary="Instruktionen säger att vi ska skilja ut de objekt som är av subtyper till FillableShape och anropa setFilled för att ändra från fylld till ofylld eller omvänt. Ordnade just det.">
+      <option name="closed" value="true" />
+      <created>1727379089042</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1727379089042</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,6 +217,7 @@
     <MESSAGE value="Använder this istället och lade till några kommentarer i Circle" />
     <MESSAGE value="Använde this, tog bort onödig clausur och lade till några förklaringar till Line och Rectangle" />
     <MESSAGE value="Tog bort todo i Shape" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tog bort todo i Shape" />
+    <MESSAGE value="Instruktionen säger att vi ska skilja ut de objekt som är av subtyper till FillableShape och anropa setFilled för att ändra från fylld till ofylld eller omvänt. Ordnade just det." />
+    <option name="LAST_COMMIT_MESSAGE" value="Instruktionen säger att vi ska skilja ut de objekt som är av subtyper till FillableShape och anropa setFilled för att ändra från fylld till ofylld eller omvänt. Ordnade just det." />
   </component>
 </project>
