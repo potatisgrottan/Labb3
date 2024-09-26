@@ -1,4 +1,4 @@
-package se.kth.olof.beyar.labb3.shapes; // TODO: Change to your package name
+package se.kth.olof.beyar.labb3.shapes;
 
 import javafx.scene.paint.Color;
 
@@ -9,9 +9,7 @@ import javafx.scene.paint.Color;
  * @author Anders Lindström, anderslm@kth.se 2021-09-15
  */
 public class World {
-
     private double width, height; // this worlds width and height
-
     private final Shape[] shapes; // an array of references to the shapes
 
     /**
@@ -24,21 +22,25 @@ public class World {
     public World(double width, double height) {
         this.width = width;
         this.height = height;
+        shapes = new Shape[6];
 
-        shapes = new Shape[4];
-        shapes[0]=new Line(0,0,100,80,Color.RED);
-        shapes[0].setVelocity(20,40);// an array of references (change to non-zero size)
+        shapes[0] = new Line(0,0,100,80,Color.RED);
+        shapes[0].setVelocity(20,40);
 
-        // Create the actual Shape objects (sub types)
-        // ....
-        shapes[1] = new Circle(width/2, height/2, 30, Color.BLUE, true);
-        shapes[1].setVelocity(-30, 50);
+        shapes[1] = new Line(width, height, width-100, height-80, Color.ORANGE);
+        shapes[1].setVelocity(-25, -35);
 
-        shapes[2] = new Rectangle(width/4, height/4, 40, 60, Color.GREEN, false);
-        shapes[2].setVelocity(40, -20);
+        shapes[2] = new Circle(width/2, height/2, 30, Color.BLUE, true);
+        shapes[2].setVelocity(-30, 50);
 
-        shapes[3] = new Line(width, height, width-100, height-80, Color.ORANGE);
-        shapes[3].setVelocity(-25, -35);
+        shapes[3] = new Circle(width/4, height/4, 30, Color.BLUE, false);
+        shapes[3].setVelocity(-30, 50);
+
+        shapes[4] = new Rectangle(width/4, height/4, 40, 60, Color.GREEN, false);
+        shapes[4].setVelocity(40, -20);
+
+        shapes[5] = new Rectangle(width/8, height/8, 40, 60, Color.BEIGE, true);
+        shapes[5].setVelocity(-40, -20);
     }
 
     /**
@@ -59,7 +61,6 @@ public class World {
      * @param elapsedTimeNs the elapsed time in nanoseconds
      */
     public void moveAndConstrain(long elapsedTimeNs) {
-        // alterantive loop: for(Shape s : shapes) { ...
         for (Shape s : shapes) {
             s.moveAndConstrain(elapsedTimeNs, 0, 0, width, height);
         }

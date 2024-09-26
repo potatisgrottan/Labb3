@@ -13,14 +13,11 @@ import javafx.stage.Stage;
 import se.kth.olof.beyar.labb3.shapes.*;
 
 public class App extends Application {
-
     private World world;
-
     private Canvas canvas; // the surface whera pad and balls are drawn
     private AnimationTimer timer;
 
     protected class BounceTimer extends AnimationTimer {
-
         private long previousNs = 0;
 
         /**
