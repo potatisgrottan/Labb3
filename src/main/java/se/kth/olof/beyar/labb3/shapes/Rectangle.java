@@ -21,22 +21,22 @@ public class Rectangle extends FillableShape{
         return height;
     }
 
-    public void setWidth(double newWidth) {
-        width = newWidth;
+    public void setWidth(double width) {
+        this.width = width;
     }
 
-    public void setHeight(double newHeight) {
-        height = newHeight;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     @Override
     public void paint(GraphicsContext gc) {
         if (isFilled()) {
             gc.setFill(getColor());
-            gc.fillRect(getX() - width/2, getY() - height/2, width, height);
+            gc.fillRect(getX() - width / 2, getY() - height / 2, width, height);
         } else {
             gc.setStroke(getColor());
-            gc.strokeRect(getX() - width/2, getY() - height/2, width, height);
+            gc.strokeRect(getX() - width / 2, getY() - height / 2, width, height);
         }
     }
 
@@ -44,14 +44,18 @@ public class Rectangle extends FillableShape{
     protected void constrain(double boxX, double boxY, double boxWidth, double boxHeight) {
         super.constrain(boxX, boxY, boxWidth, boxHeight);
 
-        if (getX() - width/2 < boxX || getX() + width/2 > boxX + boxWidth) {
+        final double edgeWidth = width / 2;
+        final double edgeHeight = height / 2;
+
+        // if rectangles edge is outside the border on the right / left side, change direction
+        if (getX() - edgeWidth < boxX || getX() + edgeWidth > boxX + boxWidth) {
             setVelocity(-getDx(), getDy());
         }
 
-        if (getY() - height/2 < boxY || getY() + height/2 > boxY + boxHeight) {
+        // if rectangles edge is outside the border on the top / bottom side, change direction
+        if (getY() - edgeHeight < boxY || getY() + edgeHeight > boxY + boxHeight) {
             setVelocity(getDx(), -getDy());
         }
-
     }
 
     @Override
