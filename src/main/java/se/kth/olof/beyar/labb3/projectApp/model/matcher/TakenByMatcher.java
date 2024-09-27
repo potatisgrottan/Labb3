@@ -3,7 +3,7 @@ package se.kth.olof.beyar.labb3.projectApp.model.matcher;
 import se.kth.olof.beyar.labb3.projectApp.model.Task;
 
 public class TakenByMatcher implements ITaskMatcher {
-    private String takenBy;
+    private final String takenBy;
 
     public TakenByMatcher(String takenBy){
         this.takenBy = takenBy;
@@ -11,7 +11,6 @@ public class TakenByMatcher implements ITaskMatcher {
 
     @Override
     public boolean match(Task task){
-        //TODO implement
-        return false;
+        return task.getTakenBy().equals(takenBy);
     }
 }
