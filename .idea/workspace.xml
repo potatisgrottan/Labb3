@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Fixade error med att vi stängde strömmen innan vi returnerade värdet (att stänga innan avbryter returvärdet)">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/io/ProjectsFileIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/io/ProjectsFileIO.java" afterDir="false" />
-    </list>
+    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -283,7 +279,21 @@
       <option name="presentableId" value="LOCAL−00021" />
       <updated>1727466033411</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL−00022" summary="Fixade error med att vi stängde strömmen innan vi returnerade värdet (att stänga innan avbryter returvärdet)">
+      <option name="closed" value="true" />
+      <created>1727467759256</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1727467759256</updated>
+    </task>
+    <task id="LOCAL−00023" summary="IntelliJ">
+      <option name="closed" value="true" />
+      <created>1727467782371</created>
+      <option name="number" value="LOCAL−00023" />
+      <option name="presentableId" value="LOCAL−00023" />
+      <updated>1727467782371</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,7 +308,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Skelett till Circle, rectangle och fillableShape" />
     <MESSAGE value="Lade till ny konstruktor med cirkelns x, y och dess färg tillsammans med en boolean som säger om den är ifylld eller inte.&#10;&#10;Fixade paint funktionen som kollar om den är filled, om den är så appliceras en typ av logik" />
     <MESSAGE value="Fixade konstruktorn så att x, y, och dess färg kommer med.&#10;&#10;Overload:e även konstruktorn med en default på icke-ifylld konstruktor" />
     <MESSAGE value="Fixade logik i constrain så att objektet inte åkte utanför gränserna i Line" />
@@ -323,6 +332,7 @@
     <MESSAGE value="Tom rad" />
     <MESSAGE value="Implementerade delar för ProjectsManager.java" />
     <MESSAGE value="Fixade error med att vi stängde strömmen innan vi returnerade värdet (att stänga innan avbryter returvärdet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixade error med att vi stängde strömmen innan vi returnerade värdet (att stänga innan avbryter returvärdet)" />
+    <MESSAGE value="IntelliJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="IntelliJ" />
   </component>
 </project>

@@ -92,6 +92,11 @@ public class Project implements Comparable<Project>, Serializable {
         return id;
     }
 
+    public ArrayList<Task> getTasks()
+    {
+        return new ArrayList<>(tasks);
+    }
+
     @Override
     public boolean equals(Object other)
     {
