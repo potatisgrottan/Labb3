@@ -5,6 +5,7 @@ import se.kth.olof.beyar.labb3.projectApp.model.matcher.ITaskMatcher;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Project implements Comparable<Project>, Serializable {
@@ -37,6 +38,10 @@ public class Project implements Comparable<Project>, Serializable {
         for (Task task : tasks)
             if (matcher.match(task))
                 matchedTasks.add(task);
+
+        // Task implementerar Comparable så vi kan används Collections.sort
+        // vilket kallar på compareTo() metoden
+        Collections.sort(matchedTasks);
 
         return matchedTasks;
     }
