@@ -1,8 +1,9 @@
-package se.kth.olof.beyar.labb3.projectApp.model.matcher;
+package se.kth.olof.beyar.labb3.projectApp.model.matchers;
 
 import se.kth.olof.beyar.labb3.projectApp.model.Task;
 
-public class TakenByMatcher implements ITaskMatcher {
+public class TakenByMatcher implements ITaskMatcher
+{
     private final String takenBy;
 
     public TakenByMatcher(String takenBy){

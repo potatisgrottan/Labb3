@@ -1,4 +1,4 @@
-package se.kth.olof.beyar.labb3.projectApp.model;
+package se.kth.olof.beyar.labb3.projectApp.model.exceptions;
 
 public class TitleNotUniqueException extends RuntimeException {
 

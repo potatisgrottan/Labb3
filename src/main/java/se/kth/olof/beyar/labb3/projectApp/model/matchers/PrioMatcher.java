@@ -1,9 +1,10 @@
-package se.kth.olof.beyar.labb3.projectApp.model.matcher;
+package se.kth.olof.beyar.labb3.projectApp.model.matchers;
 
 import se.kth.olof.beyar.labb3.projectApp.model.Task;
 import se.kth.olof.beyar.labb3.projectApp.model.TaskPrio;
 
-public class PrioMatcher implements ITaskMatcher  {
+public class PrioMatcher implements ITaskMatcher
+{
     private final TaskPrio prio;
 
     public PrioMatcher(TaskPrio prio) {

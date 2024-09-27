@@ -1,4 +1,4 @@
-package se.kth.olof.beyar.labb3.projectApp.model.matcher;
+package se.kth.olof.beyar.labb3.projectApp.model.matchers;
 
 import se.kth.olof.beyar.labb3.projectApp.model.Task;
 
