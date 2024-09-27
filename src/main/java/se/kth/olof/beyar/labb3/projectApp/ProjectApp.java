@@ -44,7 +44,6 @@ public class ProjectApp {
     }
 
     public static void main(String[] args) throws Exception {
-
         ProjectApp app = new ProjectApp();
         app.run();
     }

@@ -7,8 +7,13 @@ public class ProjectsManager {
 
     public ProjectsManager() {}
 
-    public List<Project> setProjects(List<Project> incomingProjects) {
+    public void setProjects(List<Project> incomingProjects) {
         //TODO implement
+    }
+
+    public List<Project> getProjects() {
+        //TODO implement
+        return null;
     }
 
     public boolean isTitleUnique(String title) {
@@ -21,12 +26,12 @@ public class ProjectsManager {
             }
         }*/
 
-
         return false;
     }
 
     public Project addProject(String title, String descr) throws TitleNotUniqueException {
         //TODO implement
+        return null;
     }
 
     public void removeProject(Project project) {
@@ -35,6 +40,7 @@ public class ProjectsManager {
 
     public Project getProjectById(int id) {
         //TODO implement
+        return null;
     }
 
     public List<Project> findProjects(String titleStr) {
@@ -45,6 +51,7 @@ public class ProjectsManager {
 
     private int getHighestId() {
         //TODO implement
+        return 0;
     }
 
     @Override

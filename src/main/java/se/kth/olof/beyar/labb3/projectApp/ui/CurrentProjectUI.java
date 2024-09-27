@@ -1,6 +1,6 @@
 package se.kth.olof.beyar.labb3.projectApp.ui;
 
-import se.kth.olof.beyar.labb3.projectApp.model.matcher.AllTasksmatcher;
+import se.kth.olof.beyar.labb3.projectApp.model.matcher.ITaskMatcher;
 import se.kth.olof.beyar.labb3.projectApp.model.matcher.NotDoneMatcher;
 import se.kth.olof.beyar.labb3.projectApp.model.matcher.PrioMatcher;
 import se.kth.olof.beyar.labb3.projectApp.model.*;
@@ -77,7 +77,7 @@ class CurrentProjectUI {
         String descr = scan.nextLine();
         System.out.print("Priority (L)ow, (M)edium, (H)igh? ");
         char prioChar = InputUtils.scanAndReturnFirstChar(scan);
-        Prio prio = prioChar == 'H' ? Prio.High : prioChar == 'L' ? Prio.Low : Prio.Medium;
+        TaskPrio prio = prioChar == 'H' ? TaskPrio.HIGH : prioChar == 'L' ? TaskPrio.LOW : TaskPrio.MEDIUM;
         currentProject.addTask(descr, prio);
     }
 
