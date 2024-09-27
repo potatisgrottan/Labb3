@@ -2,6 +2,7 @@ package se.kth.olof.beyar.labb3.projectApp.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Task implements Comparable<Task>, Serializable {
     private final String description;
@@ -54,6 +55,17 @@ public class Task implements Comparable<Task>, Serializable {
     public String getTakenBy()
     {
         return takenBy;
+    }
+
+    @Override
+    public boolean equals(Object other)
+    {
+        if (this == other) return true;
+
+        if (!(other instanceof Task task))
+            return false;
+
+        return description.equals(task.description) && prio.equals(task.prio);
     }
 
     @Override
