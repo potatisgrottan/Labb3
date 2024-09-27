@@ -31,11 +31,11 @@ public class Task implements Comparable<Task>, Serializable {
         this.prio = prio;
     }
 
-    @Override
+    /*@Override
     public int compareTo(Object o) {
         //TODO implement
         return 0;
-    }
+    }*/
 
     @Override
     public int compareTo(Task o)

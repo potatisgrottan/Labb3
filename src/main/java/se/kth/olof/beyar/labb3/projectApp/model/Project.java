@@ -15,6 +15,7 @@ public class Project implements Comparable<Project>, Serializable {
 
     //TODO Ska va package private men kommer ej ihåg hur man gör
     // Vad menas? // Beyar
+    // i diagramet är det en wavy linje innan project som tyder på att den ska va package private väl? //olle
     private Project(String title, String description, int id) {
         this.title = title;
         this.description = description;

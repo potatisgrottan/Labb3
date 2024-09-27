@@ -13,6 +13,15 @@ public class ProjectsManager {
 
     public boolean isTitleUnique(String title) {
         //TODO implement
+        /*List<Project> projects = findProjects(title);
+        for(int i=0; i<projects.size();i++)
+        {
+            if((projects.get(i)).equals(title)){
+                throw new TitleNotUniqueException(title+" is not unique");
+            }
+        }*/
+
+
         return false;
     }
 
@@ -30,6 +39,8 @@ public class ProjectsManager {
 
     public List<Project> findProjects(String titleStr) {
         //TODO implement
+
+        return null;
     }
 
     private int getHighestId() {
