@@ -1,6 +1,6 @@
 package se.kth.olof.beyar.labb3.projectApp.model;
 
-import se.kth.olof.beyar.labb3.projectApp.model.matcher.ITaskMatcher;
+import se.kth.olof.beyar.labb3.projectApp.model.matchers.ITaskMatcher;
 
 import java.io.Serializable;
 import java.time.LocalDate;

@@ -1,5 +1,7 @@
 package se.kth.olof.beyar.labb3.projectApp.model;
 
+import se.kth.olof.beyar.labb3.projectApp.model.exceptions.TitleNotUniqueException;
+
 import java.util.List;
 
 public class ProjectsManager {
@@ -29,7 +31,8 @@ public class ProjectsManager {
         return false;
     }
 
-    public Project addProject(String title, String descr) throws TitleNotUniqueException {
+    public Project addProject(String title, String descr) throws TitleNotUniqueException
+    {
         //TODO implement
         return null;
     }

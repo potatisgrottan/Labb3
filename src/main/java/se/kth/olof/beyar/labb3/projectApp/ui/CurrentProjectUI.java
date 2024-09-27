@@ -1,10 +1,11 @@
 package se.kth.olof.beyar.labb3.projectApp.ui;
 
-import se.kth.olof.beyar.labb3.projectApp.model.matcher.ITaskMatcher;
-import se.kth.olof.beyar.labb3.projectApp.model.matcher.NotDoneMatcher;
-import se.kth.olof.beyar.labb3.projectApp.model.matcher.PrioMatcher;
-import se.kth.olof.beyar.labb3.projectApp.model.*;
-import se.kth.olof.beyar.labb3.projectApp.model.matcher.TakenByMatcher;
+import se.kth.olof.beyar.labb3.projectApp.model.Project;
+import se.kth.olof.beyar.labb3.projectApp.model.Task;
+import se.kth.olof.beyar.labb3.projectApp.model.TaskPrio;
+import se.kth.olof.beyar.labb3.projectApp.model.TaskState;
+import se.kth.olof.beyar.labb3.projectApp.model.matchers.ITaskMatcher;
+import se.kth.olof.beyar.labb3.projectApp.model.matchers.*;
 
 import java.util.List;
 import java.util.Scanner;
