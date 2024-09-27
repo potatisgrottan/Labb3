@@ -4,24 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Formaterade kod pga OCD, fixade error meddelande på grund av felaktig typ (det deklarerades en Prio enum även fast vi bara har en TaskPrio enum)">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matchers/ITaskMatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Uppdaterade packet länkarna">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/io/ProjectsFileIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/io/ProjectsFileIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/ProjectApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/ProjectApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/TitleNotUniqueException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/exceptions/TitleNotUniqueException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matcher/ITaskMatcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matcher/NotDoneMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matchers/NotDoneMatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matcher/PrioMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matchers/PrioMatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matcher/TakenByMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/matchers/TakenByMatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/ui/CurrentProjectUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/ui/CurrentProjectUI.java" afterDir="false" />
     </list>
     <list id="3963f5b8-b6ba-4881-ab77-f9f728af0340" name="Changes by olleo" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/io/ProjectsFileIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/io/ProjectsFileIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,16 +44,22 @@
   }
 }</component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/io/ProjectsFileIO.java">
+    <file path="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java">
       <ranges>
-        <range start1="5" end1="6" start2="5" end2="5" changelist="51819b99-b391-482f-ad61-0eac7e73e5a5" />
-        <range start1="13" end1="14" start2="12" end2="12" changelist="51819b99-b391-482f-ad61-0eac7e73e5a5" />
-        <range start1="21" end1="21" start2="19" end2="20" changelist="51819b99-b391-482f-ad61-0eac7e73e5a5" />
-        <range start1="22" end1="30" start2="21" end2="30" changelist="51819b99-b391-482f-ad61-0eac7e73e5a5" />
-        <range start1="32" end1="32" start2="32" end2="37" changelist="51819b99-b391-482f-ad61-0eac7e73e5a5" />
-        <range start1="39" end1="52" start2="44" end2="55" changelist="51819b99-b391-482f-ad61-0eac7e73e5a5" />
-        <range start1="53" end1="53" start2="56" end2="67" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="54" end1="56" start2="68" end2="68" changelist="51819b99-b391-482f-ad61-0eac7e73e5a5" />
+        <range start1="4" end1="4" start2="4" end2="5" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
+        <range start1="8" end1="8" start2="9" end2="10" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
+        <range start1="9" end1="10" start2="11" end2="15" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
+        <range start1="12" end1="13" start2="17" end2="21" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
+        <range start1="16" end1="18" start2="24" end2="25" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
+        <range start1="20" end1="29" start2="27" end2="33" changelist="51819b99-b391-482f-ad61-0eac7e73e5a5" />
+        <range start1="30" end1="31" start2="34" end2="35" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
+        <range start1="33" end1="34" start2="37" end2="38" changelist="51819b99-b391-482f-ad61-0eac7e73e5a5" />
+        <range start1="35" end1="37" start2="39" end2="47" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
+        <range start1="40" end1="41" start2="50" end2="51" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
+        <range start1="44" end1="46" start2="54" end2="55" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
+        <range start1="49" end1="50" start2="58" end2="59" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
+        <range start1="51" end1="52" start2="60" end2="68" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
+        <range start1="55" end1="57" start2="71" end2="72" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
       </ranges>
     </file>
   </component>
@@ -89,12 +86,16 @@
   "keyToString": {
     "Application.App.executor": "Run",
     "Application.Canvastest.executor": "Run",
+    "Application.ProjectApp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Övriga datorer/Min Mac/Datateknik/HI1027 Objektorienterad programmering/Labb 3/Labb3",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.sourceCode"
   }
 }]]></component>
@@ -103,7 +104,7 @@
       <recent name="C:\OOP\labb3\src\main\java\se\kth\olof\beyar\labb3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Canvastest">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="se.kth.olof.beyar.labb3.App" />
       <module name="labb3" />
@@ -130,10 +131,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProjectApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="se.kth.olof.beyar.labb3.projectApp.ProjectApp" />
+      <module name="labb3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.kth.olof.beyar.labb3.projectApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Canvastest" />
+        <item itemvalue="Application.ProjectApp" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.Canvastest" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +252,42 @@
       <option name="presentableId" value="LOCAL−00013" />
       <updated>1727453621986</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL−00014" summary="Editorn busar">
+      <option name="closed" value="true" />
+      <created>1727461547532</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1727461547532</updated>
+    </task>
+    <task id="LOCAL−00015" summary="Flyttade Exception och Matchers till egna mappar">
+      <option name="closed" value="true" />
+      <created>1727461575338</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1727461575338</updated>
+    </task>
+    <task id="LOCAL−00016" summary="Implementerade equals i Task.java">
+      <option name="closed" value="true" />
+      <created>1727461599508</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1727461599508</updated>
+    </task>
+    <task id="LOCAL−00017" summary="Implementerade SerDe i ProjectsFileIO.java">
+      <option name="closed" value="true" />
+      <created>1727461622241</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1727461622241</updated>
+    </task>
+    <task id="LOCAL−00018" summary="Uppdaterade packet länkarna">
+      <option name="closed" value="true" />
+      <created>1727461703309</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1727461703309</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,6 +321,11 @@
     <MESSAGE value="Instruktionen säger att vi ska skilja ut de objekt som är av subtyper till FillableShape och anropa setFilled för att ändra från fylld till ofylld eller omvänt. Ordnade just det." />
     <MESSAGE value="Klar med Task.java" />
     <MESSAGE value="Formaterade kod pga OCD, fixade error meddelande på grund av felaktig typ (det deklarerades en Prio enum även fast vi bara har en TaskPrio enum)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formaterade kod pga OCD, fixade error meddelande på grund av felaktig typ (det deklarerades en Prio enum även fast vi bara har en TaskPrio enum)" />
+    <MESSAGE value="Editorn busar" />
+    <MESSAGE value="Flyttade Exception och Matchers till egna mappar" />
+    <MESSAGE value="Implementerade equals i Task.java" />
+    <MESSAGE value="Implementerade SerDe i ProjectsFileIO.java" />
+    <MESSAGE value="Uppdaterade packet länkarna" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uppdaterade packet länkarna" />
   </component>
 </project>

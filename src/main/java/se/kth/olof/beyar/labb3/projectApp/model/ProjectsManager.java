@@ -18,20 +18,17 @@ public class ProjectsManager {
         return null;
     }
 
-    public boolean isTitleUnique(String title) {
-        //TODO implement
-        /*List<Project> projects = findProjects(title);
-        for(int i=0; i<projects.size();i++)
-        {
-            if((projects.get(i)).equals(title)){
-                throw new TitleNotUniqueException(title+" is not unique");
-            }
-        }*/
+    public boolean isTitleUnique(String title) throws TitleNotUniqueException {
+        List<Project> projects = findProjects(title);
+
+        for (Project project : projects)
+            if ((project.getTitle()).equals(title))
+                return false;
 
         return false;
     }
 
-    public Project addProject(String title, String descr) throws TitleNotUniqueException
+    public Project addProject(String title, String description)
     {
         //TODO implement
         return null;

@@ -2,7 +2,6 @@ package se.kth.olof.beyar.labb3.projectApp.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Objects;
 
 public class Task implements Comparable<Task>, Serializable {
     private final String description;

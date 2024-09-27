@@ -87,6 +87,11 @@ public class Project implements Comparable<Project>, Serializable {
         return title;
     }
 
+    public int getId()
+    {
+        return id;
+    }
+
     @Override
     public boolean equals(Object other)
     {
