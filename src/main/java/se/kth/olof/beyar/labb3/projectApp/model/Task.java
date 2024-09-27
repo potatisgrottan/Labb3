@@ -4,14 +4,14 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Task implements Comparable<Task>, Serializable {
-    private String description;
-    private int id;
+    private final String description;
+    private final int id;
     private String takenBy;
     private TaskState state;
     private LocalDate lastUpdate;
     private TaskPrio prio;
 
-    protected Task(String description, TaskPrio prio, int id) {
+    Task(String description, TaskPrio prio, int id) {
         this.description = description;
         this.prio = prio;
         this.id = id;
@@ -34,6 +34,26 @@ public class Task implements Comparable<Task>, Serializable {
     public void setPrio(TaskPrio prio){
         this.prio = prio;
         lastUpdate = LocalDate.now();
+    }
+
+    public TaskState getState()
+    {
+        return state;
+    }
+
+    public LocalDate getLastUpdate()
+    {
+        return lastUpdate;
+    }
+
+    public TaskPrio getPrio()
+    {
+        return prio;
+    }
+
+    public String getTakenBy()
+    {
+        return takenBy;
     }
 
     @Override
