@@ -2,20 +2,27 @@ package se.kth.olof.beyar.labb3.projectApp.model;
 
 import se.kth.olof.beyar.labb3.projectApp.model.exceptions.TitleNotUniqueException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProjectsManager {
     private int nextProjectId;
+    private final ArrayList<Project> projects;
 
-    public ProjectsManager() {}
+    public ProjectsManager() {
+        this.projects = new ArrayList<>();
+        this.nextProjectId = 0;
+    }
 
     public void setProjects(List<Project> incomingProjects) {
-        //TODO implement
+        projects.clear();
+        nextProjectId = incomingProjects.getLast().getId();
+        nextProjectId++;
+        projects.addAll(incomingProjects);
     }
 
     public List<Project> getProjects() {
-        //TODO implement
-        return null;
+        return new ArrayList<>(projects);
     }
 
     public boolean isTitleUnique(String title) throws TitleNotUniqueException {
@@ -25,33 +32,44 @@ public class ProjectsManager {
             if ((project.getTitle()).equals(title))
                 return false;
 
-        return false;
+        return true;
     }
 
     public Project addProject(String title, String description)
     {
-        //TODO implement
-        return null;
+        if (!isTitleUnique(title)) {
+            throw new TitleNotUniqueException(title + " is not unique");
+        }
+
+        Project project = new Project(title, description, nextProjectId);
+        projects.add(project);
+        nextProjectId++;
+        return project;
     }
 
     public void removeProject(Project project) {
-        //TODO implement
+        projects.remove(project);
     }
 
     public Project getProjectById(int id) {
-        //TODO implement
-        return null;
+        return projects.get(id);
     }
 
     public List<Project> findProjects(String titleStr) {
-        //TODO implement
+        ArrayList<Project> filteredProjects = new ArrayList<>();
 
-        return null;
+        for (Project project : projects) {
+            if (project.getTitle().equals(titleStr)) {
+                filteredProjects.add(project);
+                break;
+            }
+        }
+
+        return filteredProjects;
     }
 
     private int getHighestId() {
-        //TODO implement
-        return 0;
+        return projects.getLast().getId();
     }
 
     @Override
