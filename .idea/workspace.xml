@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Uppdaterade packet länkarna">
+    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Tom rad">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/ProjectApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/ProjectApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Task.java" afterDir="false" />
-    </list>
-    <list id="3963f5b8-b6ba-4881-ab77-f9f728af0340" name="Changes by olleo" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/io/ProjectsFileIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/io/ProjectsFileIO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,26 +38,6 @@
     &quot;accountId&quot;: &quot;7fe09f2c-867f-4825-8639-b7a5d1088f1f&quot;
   }
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/ProjectsManager.java">
-      <ranges>
-        <range start1="4" end1="4" start2="4" end2="5" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="8" end1="8" start2="9" end2="10" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="9" end1="10" start2="11" end2="15" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="12" end1="13" start2="17" end2="21" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="16" end1="18" start2="24" end2="25" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="20" end1="29" start2="27" end2="33" changelist="51819b99-b391-482f-ad61-0eac7e73e5a5" />
-        <range start1="30" end1="31" start2="34" end2="35" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="33" end1="34" start2="37" end2="38" changelist="51819b99-b391-482f-ad61-0eac7e73e5a5" />
-        <range start1="35" end1="37" start2="39" end2="47" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="40" end1="41" start2="50" end2="51" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="44" end1="46" start2="54" end2="55" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="49" end1="50" start2="58" end2="59" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="51" end1="52" start2="60" end2="68" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-        <range start1="55" end1="57" start2="71" end2="72" changelist="3963f5b8-b6ba-4881-ab77-f9f728af0340" />
-      </ranges>
-    </file>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -96,7 +71,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.sourceCode"
+    "settings.editor.selected.configurable": "configurable.group.appearance"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -104,7 +79,7 @@
       <recent name="C:\OOP\labb3\src\main\java\se\kth\olof\beyar\labb3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.ProjectApp">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="se.kth.olof.beyar.labb3.App" />
       <module name="labb3" />
@@ -287,7 +262,28 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1727461703309</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="Implementerade saknade instruktioner som getID till Project, och övriga metoder till ProjectsManager">
+      <option name="closed" value="true" />
+      <created>1727465823069</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1727465823069</updated>
+    </task>
+    <task id="LOCAL−00020" summary="Tom rad">
+      <option name="closed" value="true" />
+      <created>1727466003502</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1727466003502</updated>
+    </task>
+    <task id="LOCAL−00021" summary="Implementerade delar för ProjectsManager.java">
+      <option name="closed" value="true" />
+      <created>1727466033411</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1727466033411</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -302,8 +298,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Line and fixed some references" />
-    <MESSAGE value="Shape and world" />
     <MESSAGE value="Line är klar. bortsett från constraint då jag inte hittat en lösning än på hur vi ska byta ut dx och dy i constraint metoden, se slutet av filmen för del a om line så har du kommit lika långt som mig" />
     <MESSAGE value="Skelett till Circle, rectangle och fillableShape" />
     <MESSAGE value="Lade till ny konstruktor med cirkelns x, y och dess färg tillsammans med en boolean som säger om den är ifylld eller inte.&#10;&#10;Fixade paint funktionen som kollar om den är filled, om den är så appliceras en typ av logik" />
@@ -326,6 +320,9 @@
     <MESSAGE value="Implementerade equals i Task.java" />
     <MESSAGE value="Implementerade SerDe i ProjectsFileIO.java" />
     <MESSAGE value="Uppdaterade packet länkarna" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uppdaterade packet länkarna" />
+    <MESSAGE value="Implementerade saknade instruktioner som getID till Project, och övriga metoder till ProjectsManager" />
+    <MESSAGE value="Tom rad" />
+    <MESSAGE value="Implementerade delar för ProjectsManager.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementerade delar för ProjectsManager.java" />
   </component>
 </project>

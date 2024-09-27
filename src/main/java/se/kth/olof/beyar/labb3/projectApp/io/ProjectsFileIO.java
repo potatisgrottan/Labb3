@@ -17,9 +17,8 @@ public class ProjectsFileIO {
     public static void serializeToFile(File file, List<Project> data) throws IOException {
         // ...
         // and then, make sure the file always get closed
-        ObjectOutputStream out = null;
         FileOutputStream filename = new FileOutputStream(file);
-        out = new ObjectOutputStream(filename);
+        ObjectOutputStream out = new ObjectOutputStream(filename);
         out.writeObject(data);
         out.close();
     }
@@ -31,10 +30,20 @@ public class ProjectsFileIO {
     @SuppressWarnings("unchecked")
     public static List<Project> deSerializeFromFile(File file) throws IOException, ClassNotFoundException
     {
+        FileInputStream fileIn = null;
         ObjectInputStream in = null;
-        FileInputStream fileIn = new FileInputStream(file);
-        in = new ObjectInputStream(fileIn);
-        in.close();
-        return (List<Project>)in.readObject();
+
+        try {
+            fileIn = new FileInputStream(file);
+            in = new ObjectInputStream(fileIn);
+            return (List<Project>) in.readObject();
+        }
+        finally {
+            if (in != null)
+                in.close();
+
+            if (fileIn != null)
+                fileIn.close();
+        }
     }
 }
