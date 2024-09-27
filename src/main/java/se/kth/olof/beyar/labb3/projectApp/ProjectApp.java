@@ -20,7 +20,6 @@ public class ProjectApp {
         boolean couldReadFile = false;
 
         try {
-
             if (projectsFile.exists()) {
                 List<Project> projects = ProjectsFileIO.deSerializeFromFile(projectsFile);
                 projectsManager.setProjects(projects);
@@ -29,7 +28,6 @@ public class ProjectApp {
 
             MainUI ui = new MainUI(projectsManager);
             ui.mainLoop();
-
         } catch (FileNotFoundException | ClassNotFoundException e) {
             System.out.println("Could not load projects from file, please check the data file.");
             System.out.println("Continuing with empty manager.");
