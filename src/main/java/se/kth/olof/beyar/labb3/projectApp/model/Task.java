@@ -11,36 +11,39 @@ public class Task implements Comparable<Task>, Serializable {
     private LocalDate lastUpdate;
     private TaskPrio prio;
 
-    //Ska va package private men kommer ej ihåg hur man gör
-    // Vad menas? // Beyar
-    private Task(String descr, TaskPrio prio, int id) {
-        this.description = descr;
+    protected Task(String description, TaskPrio prio, int id) {
+        this.description = description;
         this.prio = prio;
         this.id = id;
+        this.lastUpdate = LocalDate.now();
     }
 
     public void setTakenBy(String takenBy) {
+        if (takenBy != null)
+            throw new IllegalArgumentException("Activity already taken");
+
         this.takenBy = takenBy;
+        lastUpdate = LocalDate.now();
     }
 
     public void setState(TaskState state){
         this.state = state;
+        lastUpdate = LocalDate.now();
     }
 
     public void setPrio(TaskPrio prio){
         this.prio = prio;
+        lastUpdate = LocalDate.now();
     }
 
-    /*@Override
-    public int compareTo(Object o) {
-        //TODO implement
-        return 0;
-    }*/
-
     @Override
-    public int compareTo(Task o)
+    public int compareTo(Task other)
     {
-        //TODO implement
-        return 0;
+        int prioCompare = this.prio.compareTo(other.prio);
+
+        if (prioCompare != 0)
+            return prioCompare;
+        else
+            return this.description.compareTo(other.description);
     }
 }
