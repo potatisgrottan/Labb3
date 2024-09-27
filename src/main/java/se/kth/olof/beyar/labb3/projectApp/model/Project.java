@@ -4,52 +4,97 @@ import se.kth.olof.beyar.labb3.projectApp.model.matcher.ITaskMatcher;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Project implements Comparable<Project>, Serializable {
-    private String title;
-    private int id;
-    private String description;
+    private final String title;
+    private final int id;
+    private final String description;
     private LocalDate created;
     private int nextTaskId;
+    private final ArrayList<Task> tasks;
 
-    //TODO Ska va package private men kommer ej ihåg hur man gör
-    // Vad menas? // Beyar
-    // i diagramet är det en wavy linje innan project som tyder på att den ska va package private väl? //olle
-    private Project(String title, String description, int id) {
+    Project(String title, String description, int id) {
         this.title = title;
-        this.description = description;
         this.id = id;
+        this.description = description;
         this.created = LocalDate.now();
+        this.nextTaskId = 0;
+        this.tasks = new ArrayList<>();
     }
 
-    public Task getTaskById(int id) {
-        //TODO implement
+    public Task getTaskById(int id) throws IllegalArgumentException{
+        if (id > nextTaskId || id < 1 )
+            throw new IllegalArgumentException("ID is out of bound");
+
+        return tasks.get(id);
     }
 
     public List<Task> findTasks(ITaskMatcher matcher) {
-        //TODO implement
+        ArrayList<Task> matchedTasks = new ArrayList<>();
+
+        for (Task task : tasks)
+            if (matcher.match(task))
+                matchedTasks.add(task);
+
+        return matchedTasks;
     }
 
     public Task addTask(String description, TaskPrio prio) {
-        //TODO implement
+        created = LocalDate.now();
+        nextTaskId++;
+        return new Task(description, prio, nextTaskId);
     }
 
     public boolean removeTask(Task task) {
-        //TODO implement
-        return false;
+        created = LocalDate.now();
+        return tasks.remove(task);
     }
 
     public ProjectState getState() {
-        //TODO implement
+        if (tasks.isEmpty())
+            return ProjectState.EMPTY;
+
+        for (Task task : tasks)
+            if (task.getState() != TaskState.DONE)
+                return ProjectState.ONGOING;
+
+        return ProjectState.COMPLETED;
     }
 
     public LocalDate getLastUpdated(){
-        return created;
+        if (tasks.isEmpty())
+            return created;
+
+        LocalDate closestDate = created;
+        for (Task task : tasks)
+        {
+            if (task.getLastUpdate().isAfter(closestDate))
+                closestDate = task.getLastUpdate();
+        }
+
+        return closestDate;
+    }
+
+    public String getTitle()
+    {
+        return title;
+    }
+
+    @Override
+    public boolean equals(Object other)
+    {
+        if (this == other) return true;
+
+        if (!(other instanceof Project project))
+            return false;
+
+        return title.equals(project.title);
     }
 
     public int compareTo(Project other){
-        //TODO implement
+        return this.title.compareTo(other.title);
     }
 
     @Override
@@ -60,11 +105,5 @@ public class Project implements Comparable<Project>, Serializable {
                 ", id=" + id +
                 ", created=" + created +
                 '}';
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        //TODO implement
-        return 0;
     }
 }
