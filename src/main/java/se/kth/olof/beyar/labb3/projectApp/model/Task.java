@@ -15,13 +15,14 @@ public class Task implements Comparable<Task>, Serializable {
         this.description = description;
         this.prio = prio;
         this.id = id;
+        this.state= TaskState.TO_DO;
+        this.takenBy=null;
         this.lastUpdate = LocalDate.now();
     }
 
     public void setTakenBy(String takenBy) {
         if (takenBy != null)
             throw new IllegalArgumentException("Activity already taken");
-
         this.takenBy = takenBy;
         lastUpdate = LocalDate.now();
     }
