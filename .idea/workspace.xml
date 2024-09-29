@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Flyttade nextTaskId till egen rad" />
+    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Skrev vilket värden vi bör förvänta oss i konsolen">
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/TestMain.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -322,7 +324,14 @@
       <option name="presentableId" value="LOCAL−00027" />
       <updated>1727621486666</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL−00028" summary="Skrev vilket värden vi bör förvänta oss i konsolen">
+      <option name="closed" value="true" />
+      <created>1727621984052</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1727621984052</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,7 +346,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lade till 3 nya objekt, cirkel, linje och rektangel" />
     <MESSAGE value="Vet inte" />
     <MESSAGE value="Lade till fler Shapes med olika variationer, ändrade i App och World för att göra koden mer konsistent" />
     <MESSAGE value="Använder this istället och lade till några kommentarer" />
@@ -362,6 +370,7 @@
     <MESSAGE value="Översättning" />
     <MESSAGE value="flyttade nextTaskId till egen rad" />
     <MESSAGE value="Flyttade nextTaskId till egen rad" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flyttade nextTaskId till egen rad" />
+    <MESSAGE value="Skrev vilket värden vi bör förvänta oss i konsolen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skrev vilket värden vi bör förvänta oss i konsolen" />
   </component>
 </project>

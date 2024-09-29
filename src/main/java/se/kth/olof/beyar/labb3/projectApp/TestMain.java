@@ -21,6 +21,11 @@ public class TestMain {
             int projectCount = manager.getProjects().size();
             System.out.println("Antal skapade projekt: " + projectCount + " (Förväntat: 2)");
 
+            // Testa söka efter projekt namn
+            System.out.println("\nTestar söka efter projekt:");
+            int searchResultCount = manager.findProjects("projekt").size();
+            System.out.println("Sökte efter 'projekt', hittade: " + searchResultCount + " (Förväntad: 2)");
+
             // Testa Task-skapande och hantering
             System.out.println("\nTestar Task-skapande och hantering:");
             Task task1 = project1.addTask("Uppgift 1", TaskPrio.HIGH);
