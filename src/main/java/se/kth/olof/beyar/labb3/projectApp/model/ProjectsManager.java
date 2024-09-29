@@ -16,9 +16,15 @@ public class ProjectsManager {
 
     public void setProjects(List<Project> incomingProjects) {
         projects.clear();
-        nextProjectId = incomingProjects.getLast().getId();
-        nextProjectId++;
-        projects.addAll(incomingProjects);
+
+        if (incomingProjects.isEmpty())
+            nextProjectId = 0;
+        else
+        {
+            nextProjectId = incomingProjects.getLast().getId();
+            nextProjectId++;
+            projects.addAll(incomingProjects);
+        }
     }
 
     public List<Project> getProjects() {
