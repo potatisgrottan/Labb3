@@ -61,10 +61,7 @@ public class Task implements Comparable<Task>, Serializable {
     public boolean equals(Object other)
     {
         if (this == other) return true;
-
-        if (!(other instanceof Task task))
-            return false;
-
+        if (!(other instanceof Task task)) return false;
         return description.equals(task.description) && prio.equals(task.prio);
     }
 
