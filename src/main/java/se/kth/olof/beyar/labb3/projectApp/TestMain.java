@@ -42,15 +42,15 @@ public class TestMain {
 
             // Testa matchare
             System.out.println("\nTestar Matchare:");
-            ITaskMatcher prioMatcher = new PrioMatcher(TaskPrio.HIGH);
+            PrioMatcher prioMatcher = new PrioMatcher(TaskPrio.HIGH);
             List<Task> highPrioTasks = project1.findTasks(prioMatcher);
             System.out.println("Antal högprioriterade uppgifter: " + highPrioTasks.size() + " (Förväntat: 2)");
 
-            ITaskMatcher takenByMatcher = new TakenByMatcher("Anna");
+            TakenByMatcher takenByMatcher = new TakenByMatcher("Anna");
             List<Task> annaTasks = project1.findTasks(takenByMatcher);
             System.out.println("Antal uppgifter tagna av Anna: " + annaTasks.size() + " (Förväntat: 1)");
 
-            ITaskMatcher notDoneMatcher = new NotDoneMatcher();
+            NotDoneMatcher notDoneMatcher = new NotDoneMatcher();
             List<Task> notDoneTasks = project1.findTasks(notDoneMatcher);
             System.out.println("Antal ej klara uppgifter: " + notDoneTasks.size() + " (Förväntat: 3)");
 
