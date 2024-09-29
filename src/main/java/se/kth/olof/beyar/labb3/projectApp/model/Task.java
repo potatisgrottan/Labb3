@@ -21,7 +21,7 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
     public void setTakenBy(String takenBy) {
-        if (takenBy != null)
+        if (this.takenBy != null)
             throw new IllegalArgumentException("Activity already taken");
         this.takenBy = takenBy;
         lastUpdate = LocalDate.now();
