@@ -22,7 +22,7 @@ public class TestMain {
             System.out.println("Antal skapade projekt: " + projectCount + " (Förväntat: 2)");
 
             // Testa söka efter projekt namn
-            System.out.println("\nTestar söka efter projekt:");
+            System.out.println("\nTestar söka efter 'projekt':");
             int searchResultCount = manager.findProjects("projekt").size();
             System.out.println("Sökte efter 'projekt', hittade: " + searchResultCount + " (Förväntad: 2)");
 

@@ -65,9 +65,9 @@ public class ProjectsManager {
         ArrayList<Project> filteredProjects = new ArrayList<>();
 
         for (Project project : projects) {
-            if (project.getTitle().equals(titleStr)) {
+            // toLowerCase() för att vi söker med case-insensitive
+            if (project.getTitle().toLowerCase().contains(titleStr.toLowerCase())) {
                 filteredProjects.add(project);
-                break;
             }
         }
 
