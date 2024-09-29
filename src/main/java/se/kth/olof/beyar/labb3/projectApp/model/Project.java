@@ -48,8 +48,10 @@ public class Project implements Comparable<Project>, Serializable {
 
     public Task addTask(String description, TaskPrio prio) {
         created = LocalDate.now();
+        Task newTask = new Task(description, prio, nextTaskId);
         nextTaskId++;
-        return new Task(description, prio, nextTaskId);
+
+        return newTask;
     }
 
     public boolean removeTask(Task task) {
