@@ -121,7 +121,6 @@ public class Project implements Comparable<Project>, Serializable {
                 "title: '" + title + '\'' +
                 ", description: '" + description + '\'' +
                 ", id: " + id +
-                ", created: " + created +
                 '}';
     }
 }

@@ -5,6 +5,7 @@ import se.kth.olof.beyar.labb3.delb.io.ProjectsFileIO;
 import se.kth.olof.beyar.labb3.delb.model.matchers.*;
 
 import java.io.File;
+import java.time.LocalDate;
 import java.util.List;
 
 public class TestMain {
@@ -67,6 +68,34 @@ public class TestMain {
 
             List<Project> loadedProjects = ProjectsFileIO.deSerializeFromFile(testFile);
             System.out.println("Antal deserialiserade projekt: " + loadedProjects.size() + " (Förväntat: 2)");
+            System.out.println("Antal deserialiserade tasks hos första projekt: " + loadedProjects.getFirst().getTasks().size() + " (Förväntat: 3)");
+            System.out.println("Antal deserialiserade tasks hos sista projekt: " + loadedProjects.getLast().getTasks().size() + " (Förväntat: 0)");
+
+            // Testa removeProject i ProjectsManager
+            System.out.println("\nTestar removeProject i ProjectsManager:");
+            int projectCountBefore = manager.getProjects().size();
+            manager.removeProject(project2);
+            int projectCountAfter = manager.getProjects().size();
+            System.out.println("Antal projekt före borttagning: " + projectCountBefore);
+            System.out.println("Antal projekt efter: " + projectCountAfter);
+            System.out.print("(Förväntat: " + !(projectCountBefore == (projectCountAfter - 1)) + ")\n");
+
+            // Testa removeTask i Project
+            System.out.println("\nTestar removeTask i Project:");
+            int taskCountBefore = project1.getTasks().size();
+            boolean taskRemoved = project1.removeTask(task2);
+            int taskCountAfter = project1.getTasks().size();
+            System.out.println("Uppgift borttagen: " + taskRemoved);
+            System.out.println("Antal uppgifter före: " + taskCountBefore);
+            System.out.println("Antal uppgifter efter: " + taskCountAfter);
+            System.out.print("(Förväntat: " + !(taskCountBefore == (taskCountAfter - 1)) + ")\n");
+
+            // Testa getLastUpdated i Project
+            System.out.println("\nTestar getLastUpdated i Project:");
+            LocalDate lastUpdated = project1.getLastUpdated();
+            LocalDate today = LocalDate.now();
+            System.out.println("Senast uppdaterad: " + lastUpdated + " (Förväntat: dagens datum eller tidigare)");
+            System.out.println("Är det dagens datum eller tidigare: " + (lastUpdated.isBefore(today) || lastUpdated.isEqual(today)));
 
             testFile.deleteOnExit();
             System.out.println("\nAlla tester slutförda!");

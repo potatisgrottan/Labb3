@@ -79,7 +79,7 @@ public class Task implements Comparable<Task>, Serializable {
     @Override
     public String toString()
     {
-        return "Task {" +
+        return "\tTask {" +
                 "description: '" + description + '\'' +
                 ", id: " + id +
                 ", takenBy: '" + takenBy + '\'' +
