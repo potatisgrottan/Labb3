@@ -68,7 +68,8 @@ public class TestMain {
             List<Project> loadedProjects = ProjectsFileIO.deSerializeFromFile(testFile);
             System.out.println("Antal deserialiserade projekt: " + loadedProjects.size() + " (Förväntat: 2)");
 
-            testFile.delete();
+            //testFile.delete();
+            testFile.deleteOnExit();
             System.out.println("\nAlla tester slutförda!");
         } catch (Exception e) {
             System.out.println("Ett fel uppstod: ");

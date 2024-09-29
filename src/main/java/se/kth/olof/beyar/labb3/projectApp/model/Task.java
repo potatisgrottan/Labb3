@@ -15,6 +15,7 @@ public class Task implements Comparable<Task>, Serializable {
         this.description = description;
         this.prio = prio;
         this.id = id;
+        this.state = TaskState.TO_DO;
         this.lastUpdate = LocalDate.now();
     }
 
