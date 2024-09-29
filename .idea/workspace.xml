@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="IntelliJ">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/kth/olof/beyar/labb3/projectApp/model/Task.java" afterDir="false" />
-    </list>
+    <list default="true" id="51819b99-b391-482f-ad61-0eac7e73e5a5" name="Changes" comment="Flyttade nextTaskId till egen rad" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -299,7 +294,35 @@
       <option name="presentableId" value="LOCAL−00023" />
       <updated>1727467782371</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL−00024" summary="Fixade bug med att det inte gick att ändra sätta &quot;takenBy&quot; hos en Task">
+      <option name="closed" value="true" />
+      <created>1727621423800</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1727621423800</updated>
+    </task>
+    <task id="LOCAL−00025" summary="Översättning">
+      <option name="closed" value="true" />
+      <created>1727621441313</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1727621441313</updated>
+    </task>
+    <task id="LOCAL−00026" summary="flyttade nextTaskId till egen rad">
+      <option name="closed" value="true" />
+      <created>1727621479272</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1727621479272</updated>
+    </task>
+    <task id="LOCAL−00027" summary="Flyttade nextTaskId till egen rad">
+      <option name="closed" value="true" />
+      <created>1727621486666</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1727621486666</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,10 +337,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lade till ny konstruktor med cirkelns x, y och dess färg tillsammans med en boolean som säger om den är ifylld eller inte.&#10;&#10;Fixade paint funktionen som kollar om den är filled, om den är så appliceras en typ av logik" />
-    <MESSAGE value="Fixade konstruktorn så att x, y, och dess färg kommer med.&#10;&#10;Overload:e även konstruktorn med en default på icke-ifylld konstruktor" />
-    <MESSAGE value="Fixade logik i constrain så att objektet inte åkte utanför gränserna i Line" />
-    <MESSAGE value="Fixade konstruktor så att den får in x, y, höjd och bredd tillsammans med färg och om den är ifylld&#10;&#10;Även i denna funktion fixade jag i Paint metoden så om den är ifylld appliceras en viss typ av logik" />
     <MESSAGE value="Lade till 3 nya objekt, cirkel, linje och rektangel" />
     <MESSAGE value="Vet inte" />
     <MESSAGE value="Lade till fler Shapes med olika variationer, ändrade i App och World för att göra koden mer konsistent" />
@@ -339,6 +358,10 @@
     <MESSAGE value="Implementerade delar för ProjectsManager.java" />
     <MESSAGE value="Fixade error med att vi stängde strömmen innan vi returnerade värdet (att stänga innan avbryter returvärdet)" />
     <MESSAGE value="IntelliJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="IntelliJ" />
+    <MESSAGE value="Fixade bug med att det inte gick att ändra sätta &quot;takenBy&quot; hos en Task" />
+    <MESSAGE value="Översättning" />
+    <MESSAGE value="flyttade nextTaskId till egen rad" />
+    <MESSAGE value="Flyttade nextTaskId till egen rad" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flyttade nextTaskId till egen rad" />
   </component>
 </project>
