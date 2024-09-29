@@ -26,7 +26,7 @@ public class Project implements Comparable<Project>, Serializable {
     }
 
     public Task getTaskById(int id) throws IllegalArgumentException{
-        if (id > nextTaskId || id < 1 )
+        if (id > nextTaskId || id < 0 )
             throw new IllegalArgumentException("ID is out of bound");
 
         return tasks.get(id);
@@ -47,8 +47,9 @@ public class Project implements Comparable<Project>, Serializable {
     }
 
     public Task addTask(String description, TaskPrio prio) {
-        created = LocalDate.now();
         Task newTask = new Task(description, prio, nextTaskId);
+        tasks.add(newTask);
+        created = LocalDate.now();
         nextTaskId++;
 
         return newTask;
