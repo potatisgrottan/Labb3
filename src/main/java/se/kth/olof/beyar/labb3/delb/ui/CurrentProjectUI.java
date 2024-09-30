@@ -60,11 +60,43 @@ class CurrentProjectUI {
                     break;
                 case 'X':
                     break;
+                case 'R':
+                    removeTask();
+                    break;
                 default:
                     System.out.println("Unknown command");
             }
 
         } while (choice != 'X');
+    }
+
+    private void removeTask()
+    {
+        System.out.print("Task id? ");
+        int id = scan.nextInt();
+        scan.nextLine(); //remove "new line" from scanner buffer
+        Task task = currentProject.getTaskById(id);
+
+        if (task != null) {
+            System.out.println(task);
+            System.out.print("Are you sure? (Y)es (N)o ");
+            char stateChar = InputUtils.scanAndReturnFirstChar(scan);
+
+            if (stateChar == 'Y')
+            {
+                currentProject.removeTask(task);
+            }
+            else if(stateChar == ('N'))
+            {
+                // Do nothing
+            }
+            else
+            {
+                System.out.println("Unknown command.");
+            }
+        } else {
+            System.out.println("Id not found.");
+        }
     }
 
     private void viewTasks(ITaskMatcher matcher) {
@@ -112,6 +144,8 @@ class CurrentProjectUI {
         System.out.println("H - list high priority tasks");
         System.out.println("A - add task");
         System.out.println("U - update task");
+        // TODO implement this
+        System.out.println("R - remove task");
         System.out.println("X - exit project menu");
         System.out.println("----------");
     }
