@@ -10,8 +10,8 @@ public class ProjectsManager {
     private final ArrayList<Project> projects;
 
     /**
-     * Constructs a new ProjectsManager.
-     * Initializes an empty list of projects and sets the next project ID to 0.
+     * Constructs a new ProjectsManager
+     * Initializes an empty list of projects and sets the next project ID to 0
      */
     public ProjectsManager() {
         this.projects = new ArrayList<>();
@@ -19,9 +19,9 @@ public class ProjectsManager {
     }
 
     /**
-     * Sets the list of projects to a new collection.
+     * Sets the list of projects to a new collection
      *
-     * @param incomingProjects The new list of projects to set.
+     * @param incomingProjects The new list of projects to set
      */
     public void setProjects(List<Project> incomingProjects) {
         projects.clear();
@@ -37,20 +37,20 @@ public class ProjectsManager {
     }
 
     /**
-     * Gets a copy of the list of all projects.
+     * Gets a list copy of all projects
      *
-     * @return A new ArrayList containing all projects.
+     * @return A new ArrayList containing all projects
      */
     public List<Project> getProjects() {
         return new ArrayList<>(projects);
     }
 
     /**
-     * Checks if a given project title is unique.
+     * Checks if a given project title is unique
      *
-     * @param title The title to check for uniqueness.
-     * @return true if the title is unique, false otherwise.
-     * @throws TitleNotUniqueException if the title is not unique.
+     * @param title The title to check for uniqueness
+     * @return true if the title is unique, false otherwise
+     * @throws TitleNotUniqueException if the title is not unique
      */
     public boolean isTitleUnique(String title) throws TitleNotUniqueException {
         List<Project> projects = findProjects(title);
@@ -63,12 +63,12 @@ public class ProjectsManager {
     }
 
     /**
-     * Adds a new project to the manager.
+     * Adds a new project to the manager
      *
-     * @param title The title of the new project.
-     * @param description The description of the new project.
-     * @return The newly created Project object.
-     * @throws TitleNotUniqueException if the title is not unique.
+     * @param title The title of the new project
+     * @param description The description of the new project
+     * @return The newly created Project object
+     * @throws TitleNotUniqueException if the title is not unique
      */
     public Project addProject(String title, String description)
     {
@@ -83,29 +83,29 @@ public class ProjectsManager {
     }
 
     /**
-     * Removes a project from the manager.
+     * Removes a project from the manager
      *
-     * @param project The project to be removed.
+     * @param project The project to be removed
      */
     public void removeProject(Project project) {
         projects.remove(project);
     }
 
     /**
-     * Retrieves a project based on its ID.
+     * Retrieves a project based on its ID
      *
-     * @param id The ID of the project to retrieve.
-     * @return The Project object with the specified ID.
+     * @param id The ID of the project to retrieve
+     * @return The Project object with the specified ID
      */
     public Project getProjectById(int id) {
         return projects.get(id);
     }
 
     /**
-     * Finds projects whose titles contain the given string (case-insensitive).
+     * Finds projects whose titles contain the given string (case-insensitive)
      *
-     * @param titleStr The string to search for in project titles.
-     * @return A list of projects whose titles contain the search string.
+     * @param titleStr The string to search for in project titles
+     * @return A list of projects whose titles contain the search string
      */
     public List<Project> findProjects(String titleStr) {
         ArrayList<Project> filteredProjects = new ArrayList<>();
@@ -121,9 +121,9 @@ public class ProjectsManager {
     }
 
     /**
-     * Gets the highest project ID currently in use.
+     * Gets the highest project ID currently in use
      *
-     * @return The highest project ID.
+     * @return The highest project ID
      */
     private int getHighestId() {
         return projects.getLast().getId();

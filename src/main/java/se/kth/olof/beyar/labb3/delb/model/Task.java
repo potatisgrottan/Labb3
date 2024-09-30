@@ -16,11 +16,11 @@ public class Task implements Comparable<Task>, Serializable {
     private TaskPrio prio;
 
     /**
-     * Constructs a new task.
+     * Constructs a new task
      *
-     * @param description The description of the task.
-     * @param prio The priority of the task.
-     * @param id The unique identifier for the task.
+     * @param description The description of the task
+     * @param prio The priority of the task
+     * @param id The unique identifier for the task
      */
     Task(String description, TaskPrio prio, int id) {
         this.description = description;
@@ -32,10 +32,10 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
     /**
-     * Assigns the task to a person.
+     * Assigns the task to a person
      *
-     * @param takenBy The name of the person taking the task.
-     * @throws IllegalArgumentException if the task is already assigned to someone.
+     * @param takenBy The name of the person taking the task
+     * @throws IllegalArgumentException if the task is already assigned to someone
      */
     public void setTakenBy(String takenBy) {
         if (this.takenBy != null)
@@ -46,9 +46,9 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
     /**
-     * Updates the state of the task.
+     * Updates the state of the task
      *
-     * @param state The new state to set for the task.
+     * @param state The new state to set for the task
      */
     public void setState(TaskState state){
         this.state = state;
@@ -56,9 +56,9 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
     /**
-     * Sets the priority level of the task.
+     * Sets the priority level of the task
      *
-     * @param prio The new priority to set for the task.
+     * @param prio The new priority to set for the task
      */
     public void setPrio(TaskPrio prio){
         this.prio = prio;
@@ -66,9 +66,9 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
     /**
-     * Gets the current state of the task.
+     * Gets the current state of the task
      *
-     * @return The current TaskState of the task.
+     * @return The current TaskState of the task
      */
     public TaskState getState()
     {
@@ -76,9 +76,9 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
     /**
-     * Gets the date of the last update to the task.
+     * Gets the date of the last update to the task
      *
-     * @return The LocalDate when the task was last updated.
+     * @return The LocalDate when the task was last updated
      */
     public LocalDate getLastUpdate()
     {
@@ -86,9 +86,9 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
     /**
-     * Gets the priority level of the task.
+     * Gets the priority level of the task according to the TaskPrio enum
      *
-     * @return The TaskPrio of the task.
+     * @return The TaskPrio of the task
      */
     public TaskPrio getPrio()
     {
@@ -96,9 +96,9 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
     /**
-     * Gets the name of the person assigned to the task.
+     * Gets the name of the person assigned to the task
      *
-     * @return The name of the person assigned to the task, or null if unassigned.
+     * @return The name of the person assigned to the task, or null if unassigned
      */
     public String getTakenBy()
     {
@@ -114,10 +114,11 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
     /**
-     * Compares this task to another task based on priority and description.
+     * Compares this task to another task based on priority and description,
+     * if priority is equal, then we compare the description
      *
-     * @param other The task to compare to.
-     * @return A negative integer, zero, or a positive integer as this task is less than, equal to, or greater than the specified task.
+     * @param other The task to compare to
+     * @return A negative number, zero, or a positive number as this task is less than, equal to, or greater than the specified task
      */
     @Override
     public int compareTo(Task other)
