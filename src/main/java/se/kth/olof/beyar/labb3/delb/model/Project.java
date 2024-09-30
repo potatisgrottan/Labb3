@@ -12,7 +12,6 @@ import java.util.List;
  * @author Olof and Beyar
  * This class represents the logic and data of a project
  */
-
 public class Project implements Comparable<Project>, Serializable {
     private final String title;
     private final int id;
@@ -21,7 +20,13 @@ public class Project implements Comparable<Project>, Serializable {
     private int nextTaskId;
     private final ArrayList<Task> tasks;
 
-    /** Constructs a new project*/
+    /**
+     * Constructs a new project.
+     *
+     * @param title The title of the project.
+     * @param description The description of the project.
+     * @param id The unique identifier for the project.
+     */
     Project(String title, String description, int id) {
         this.title = title;
         this.id = id;
@@ -31,7 +36,13 @@ public class Project implements Comparable<Project>, Serializable {
         this.tasks = new ArrayList<>();
     }
 
-    /** Returns a task based on id */
+    /**
+     * Retrieves a task based on its ID.
+     *
+     * @param id The ID of the task to retrieve.
+     * @return The Task object with the specified ID.
+     * @throws IllegalArgumentException if the ID is out of bounds.
+     */
     public Task getTaskById(int id) throws IllegalArgumentException{
         if (id > nextTaskId || id < 0 )
             throw new IllegalArgumentException("ID is out of bound");
@@ -39,7 +50,12 @@ public class Project implements Comparable<Project>, Serializable {
         return tasks.get(id);
     }
 
-    /** Returns a list containing task matching the search requirement*/
+    /**
+     * Finds tasks that match the given criteria.
+     *
+     * @param matcher The matcher used to filter tasks.
+     * @return A sorted list of tasks that match the criteria.
+     */
     public List<Task> findTasks(ITaskMatcher matcher) {
         ArrayList<Task> matchedTasks = new ArrayList<>();
 
@@ -54,7 +70,13 @@ public class Project implements Comparable<Project>, Serializable {
         return matchedTasks;
     }
 
-    /** Adds a new task to the project */
+    /**
+     * Adds a new task to the project.
+     *
+     * @param description The description of the new task.
+     * @param prio The priority of the new task.
+     * @return The newly created Task object.
+     */
     public Task addTask(String description, TaskPrio prio) {
         Task newTask = new Task(description, prio, nextTaskId);
         tasks.add(newTask);
@@ -64,13 +86,23 @@ public class Project implements Comparable<Project>, Serializable {
         return newTask;
     }
 
-    /** Removes a task from the project */
+    /**
+     * Removes a task from the project.
+     *
+     * @param task The task to be removed.
+     * @return true if the task was successfully removed, false otherwise.
+     */
     public boolean removeTask(Task task) {
         created = LocalDate.now();
+        nextTaskId--;
         return tasks.remove(task);
     }
 
-    /**  Returns the state of the project */
+    /**
+     * Determines the current state of the project.
+     *
+     * @return The ProjectState representing the current state of the project.
+     */
     public ProjectState getState() {
         if (tasks.isEmpty())
             return ProjectState.EMPTY;
@@ -82,7 +114,11 @@ public class Project implements Comparable<Project>, Serializable {
         return ProjectState.COMPLETED;
     }
 
-    /**  Returns the last time a task updated in the project */
+    /**
+     * Retrieves the date of the last update to any task in the project.
+     *
+     * @return The LocalDate of the most recent task update or project creation date if no tasks exist.
+     */
     public LocalDate getLastUpdated(){
         if (tasks.isEmpty())
             return created;
@@ -96,17 +132,32 @@ public class Project implements Comparable<Project>, Serializable {
 
         return closestDate;
     }
-    /**  Returns the title of the project */
+
+    /**
+     * Gets the title of the project.
+     *
+     * @return The title of the project.
+     */
     public String getTitle()
     {
         return title;
     }
-    /**  Returns the id of the project */
+
+    /**
+     * Gets the ID of the project.
+     *
+     * @return The unique identifier of the project.
+     */
     public int getId()
     {
         return id;
     }
-    /**  Returns a reference to the list of tasks */
+
+    /**
+     * Gets a copy of the list of tasks in the project.
+     *
+     * @return An ArrayList containing all tasks in the project.
+     */
     public ArrayList<Task> getTasks()
     {
         return new ArrayList<>(tasks);
@@ -123,6 +174,12 @@ public class Project implements Comparable<Project>, Serializable {
         return title.equals(project.title);
     }
 
+    /**
+     * Compares this project to another project based on their titles.
+     *
+     * @param other The project to compare to.
+     * @return A negative integer, zero, or a positive integer as this project is less than, equal to, or greater than the specified project.
+     */
     public int compareTo(Project other){
         return this.title.compareTo(other.title);
     }

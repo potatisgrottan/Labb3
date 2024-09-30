@@ -15,17 +15,28 @@ public class Task implements Comparable<Task>, Serializable {
     private LocalDate lastUpdate;
     private TaskPrio prio;
 
-    /** Constructs a new task*/
+    /**
+     * Constructs a new task.
+     *
+     * @param description The description of the task.
+     * @param prio The priority of the task.
+     * @param id The unique identifier for the task.
+     */
     Task(String description, TaskPrio prio, int id) {
         this.description = description;
         this.prio = prio;
         this.id = id;
         this.state = TaskState.TO_DO;
-        this.takenBy=null;
+        this.takenBy = null;
         this.lastUpdate = LocalDate.now();
     }
 
-    /** Sets a name on who is assaigned to the task*/
+    /**
+     * Assigns the task to a person.
+     *
+     * @param takenBy The name of the person taking the task.
+     * @throws IllegalArgumentException if the task is already assigned to someone.
+     */
     public void setTakenBy(String takenBy) {
         if (this.takenBy != null)
             throw new IllegalArgumentException("Task already taken by " + this.takenBy);
@@ -34,42 +45,65 @@ public class Task implements Comparable<Task>, Serializable {
         lastUpdate = LocalDate.now();
     }
 
-    /**Sets a new state to the task  */
+    /**
+     * Updates the state of the task.
+     *
+     * @param state The new state to set for the task.
+     */
     public void setState(TaskState state){
         this.state = state;
         lastUpdate = LocalDate.now();
     }
 
-    /** Sets the tasks priority level*/
+    /**
+     * Sets the priority level of the task.
+     *
+     * @param prio The new priority to set for the task.
+     */
     public void setPrio(TaskPrio prio){
         this.prio = prio;
         lastUpdate = LocalDate.now();
     }
 
-    /** Returns the state that the task is in */
+    /**
+     * Gets the current state of the task.
+     *
+     * @return The current TaskState of the task.
+     */
     public TaskState getState()
     {
         return state;
     }
 
-    /** Returns the last time that the task was updated */
+    /**
+     * Gets the date of the last update to the task.
+     *
+     * @return The LocalDate when the task was last updated.
+     */
     public LocalDate getLastUpdate()
     {
         return lastUpdate;
     }
 
-    /** Returns the tasks priority level */
+    /**
+     * Gets the priority level of the task.
+     *
+     * @return The TaskPrio of the task.
+     */
     public TaskPrio getPrio()
     {
         return prio;
     }
 
-    /** Returns who has taken the task */
+    /**
+     * Gets the name of the person assigned to the task.
+     *
+     * @return The name of the person assigned to the task, or null if unassigned.
+     */
     public String getTakenBy()
     {
         return takenBy;
     }
-
 
     @Override
     public boolean equals(Object other)
@@ -79,6 +113,12 @@ public class Task implements Comparable<Task>, Serializable {
         return description.equals(task.description) && prio.equals(task.prio);
     }
 
+    /**
+     * Compares this task to another task based on priority and description.
+     *
+     * @param other The task to compare to.
+     * @return A negative integer, zero, or a positive integer as this task is less than, equal to, or greater than the specified task.
+     */
     @Override
     public int compareTo(Task other)
     {
