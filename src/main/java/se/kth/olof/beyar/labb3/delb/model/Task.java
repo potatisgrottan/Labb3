@@ -3,6 +3,10 @@ package se.kth.olof.beyar.labb3.delb.model;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+/**
+ * @author Olof and Beyar
+ * This class represents the data and logic of a task
+ */
 public class Task implements Comparable<Task>, Serializable {
     private final String description;
     private final int id;
@@ -11,6 +15,7 @@ public class Task implements Comparable<Task>, Serializable {
     private LocalDate lastUpdate;
     private TaskPrio prio;
 
+    /** Constructs a new task*/
     Task(String description, TaskPrio prio, int id) {
         this.description = description;
         this.prio = prio;
@@ -20,6 +25,7 @@ public class Task implements Comparable<Task>, Serializable {
         this.lastUpdate = LocalDate.now();
     }
 
+    /** Sets a name on who is assaigned to the task*/
     public void setTakenBy(String takenBy) {
         if (this.takenBy != null)
             throw new IllegalArgumentException("Task already taken by " + this.takenBy);
@@ -28,35 +34,42 @@ public class Task implements Comparable<Task>, Serializable {
         lastUpdate = LocalDate.now();
     }
 
+    /**Sets a new state to the task  */
     public void setState(TaskState state){
         this.state = state;
         lastUpdate = LocalDate.now();
     }
 
+    /** Sets the tasks priority level*/
     public void setPrio(TaskPrio prio){
         this.prio = prio;
         lastUpdate = LocalDate.now();
     }
 
+    /** Returns the state that the task is in */
     public TaskState getState()
     {
         return state;
     }
 
+    /** Returns the last time that the task was updated */
     public LocalDate getLastUpdate()
     {
         return lastUpdate;
     }
 
+    /** Returns the tasks priority level */
     public TaskPrio getPrio()
     {
         return prio;
     }
 
+    /** Returns who has taken the task */
     public String getTakenBy()
     {
         return takenBy;
     }
+
 
     @Override
     public boolean equals(Object other)

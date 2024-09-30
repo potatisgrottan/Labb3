@@ -8,6 +8,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * @author Olof and Beyar
+ * This class represents the logic and data of a project
+ */
+
 public class Project implements Comparable<Project>, Serializable {
     private final String title;
     private final int id;
@@ -16,6 +21,7 @@ public class Project implements Comparable<Project>, Serializable {
     private int nextTaskId;
     private final ArrayList<Task> tasks;
 
+    /** Constructs a new project*/
     Project(String title, String description, int id) {
         this.title = title;
         this.id = id;
@@ -25,6 +31,7 @@ public class Project implements Comparable<Project>, Serializable {
         this.tasks = new ArrayList<>();
     }
 
+    /** Returns a task based on id */
     public Task getTaskById(int id) throws IllegalArgumentException{
         if (id > nextTaskId || id < 0 )
             throw new IllegalArgumentException("ID is out of bound");
@@ -32,6 +39,7 @@ public class Project implements Comparable<Project>, Serializable {
         return tasks.get(id);
     }
 
+    /** Returns a list containing task matching the search requirement*/
     public List<Task> findTasks(ITaskMatcher matcher) {
         ArrayList<Task> matchedTasks = new ArrayList<>();
 
@@ -46,21 +54,23 @@ public class Project implements Comparable<Project>, Serializable {
         return matchedTasks;
     }
 
+    /** Adds a new task to the project */
     public Task addTask(String description, TaskPrio prio) {
         Task newTask = new Task(description, prio, nextTaskId);
         tasks.add(newTask);
         created = LocalDate.now();
-        tasks.add(new Task(description, prio, nextTaskId));
         nextTaskId++;
 
         return newTask;
     }
 
+    /** Removes a task from the project */
     public boolean removeTask(Task task) {
         created = LocalDate.now();
         return tasks.remove(task);
     }
 
+    /**  Returns the state of the project */
     public ProjectState getState() {
         if (tasks.isEmpty())
             return ProjectState.EMPTY;
@@ -72,6 +82,7 @@ public class Project implements Comparable<Project>, Serializable {
         return ProjectState.COMPLETED;
     }
 
+    /**  Returns the last time a task updated in the project */
     public LocalDate getLastUpdated(){
         if (tasks.isEmpty())
             return created;
@@ -85,17 +96,17 @@ public class Project implements Comparable<Project>, Serializable {
 
         return closestDate;
     }
-
+    /**  Returns the title of the project */
     public String getTitle()
     {
         return title;
     }
-
+    /**  Returns the id of the project */
     public int getId()
     {
         return id;
     }
-
+    /**  Returns a reference to the list of tasks */
     public ArrayList<Task> getTasks()
     {
         return new ArrayList<>(tasks);
