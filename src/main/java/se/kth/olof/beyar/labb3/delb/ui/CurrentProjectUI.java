@@ -144,7 +144,6 @@ class CurrentProjectUI {
         System.out.println("H - list high priority tasks");
         System.out.println("A - add task");
         System.out.println("U - update task");
-        // TODO implement this
         System.out.println("R - remove task");
         System.out.println("X - exit project menu");
         System.out.println("----------");
